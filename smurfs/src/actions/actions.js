@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const GET_SMURF_PENDING = "GET_SMURF_PENDING";
-const GET_SMURF_SUCCESS = "GET_SMURF_SUCCESS";
-const GET_SMURF_FAILED = "GET_SMURF_FAILED";
+export const GET_SMURF_PENDING = "GET_SMURF_PENDING";
+export const GET_SMURF_SUCCESS = "GET_SMURF_SUCCESS";
+export const GET_SMURF_FAILED = "GET_SMURF_FAILED";
 
 export function getSmurf() {
   return dispatch => {
