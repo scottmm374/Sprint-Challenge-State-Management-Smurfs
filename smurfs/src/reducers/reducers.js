@@ -2,7 +2,7 @@ import {
   GET_SMURF_PENDING,
   GET_SMURF_SUCCESS,
   GET_SMURF_FAILED,
-  ADD_SMURF_PENDING
+  ADD_SMURF
 } from "../actions/actions";
 
 const initialState = {
@@ -37,7 +37,7 @@ export function reducer(state = initialState, action) {
       };
     }
 
-    case ADD_SMURF_PENDING: {
+    case ADD_SMURF: {
       return {
         ...state,
         addingSmurf: true

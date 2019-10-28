@@ -6,7 +6,7 @@ export const GET_SMURF_SUCCESS = "GET_SMURF_SUCCESS";
 export const GET_SMURF_FAILED = "GET_SMURF_FAILED";
 
 //Creating new smurfs
-export const ADD_SMURF_PENDING = "ADD_SMURF_PENDING";
+export const ADD_SMURF = "ADD_SMURF";
 
 export function getSmurf() {
   return dispatch => {
@@ -25,6 +25,7 @@ export function getSmurf() {
 
 export function addSmurf(smurf) {
   return dispatch => {
+    dispatch({ type: ADD_SMURF });
     axios
       .post("http://localhost:3333/smurfs", smurf)
       .then(res => {
