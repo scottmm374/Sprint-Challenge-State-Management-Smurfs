@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import SmurfList from "./SmurfList";
 import { getSmurf } from "../actions/actions";
 import { connect } from "react-redux";
 import "./App.css";
@@ -11,6 +12,7 @@ function App(props) {
   return (
     <div className="App">
       <h1>SMURFS Village</h1>
+      <SmurfList smurfs={props.smurfs} />
     </div>
   );
 }
