@@ -8,10 +8,6 @@ export const GET_SMURF_FAILED = "GET_SMURF_FAILED";
 //Creating new smurfs
 export const ADD_SMURF_PENDING = "ADD_SMURF_PENDING";
 
-// removed these to try something and it worked. Originally had these in addsmurf()
-// export const ADD_SMURF_SUCCESS = "ADD_SMURF_SUCCESS";
-// export const ADD_SMURF_FAILED = "ADD_SMURF_FAILED";
-
 export function getSmurf() {
   return dispatch => {
     dispatch({ type: GET_SMURF_PENDING });

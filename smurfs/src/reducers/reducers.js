@@ -48,22 +48,3 @@ export function reducer(state = initialState, action) {
       return state;
   }
 }
-
-// Keeping this to look at later, I removed these and changed actions a bit, and it worked.
-// Need clarification why?
-
-// case ADD_SMURF_SUCCESS: {
-//   return {
-//     ...state,
-//     smurfs: [...state.smurfs, action.payload],
-//     addingSmurf: false
-//   };
-// }
-
-// case ADD_SMURF_FAILED: {
-//   return {
-//     ...state,
-//     error: action.payload,
-//     addingSmurf: false
-//   };
-// }
