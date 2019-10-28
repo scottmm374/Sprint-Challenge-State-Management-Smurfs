@@ -6,15 +6,15 @@ function NewSmurfForm(props) {
   const [newSmurf, setNewSmurf] = useState({
     name: "",
     age: null,
-    height: ""
+    height: "",
+    id: null
   });
 
   const handleChange = e => {
     setNewSmurf({ ...newSmurf, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
-    // e.prevent.default();
+  const handleSubmit = () => {
     props.addSmurf(newSmurf);
   };
 

@@ -49,6 +49,9 @@ export function reducer(state = initialState, action) {
   }
 }
 
+// Keeping this to look at later, I removed these and changed actions a bit, and it worked.
+// Need clarification why?
+
 // case ADD_SMURF_SUCCESS: {
 //   return {
 //     ...state,
