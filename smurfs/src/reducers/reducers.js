@@ -2,14 +2,12 @@ import {
   GET_SMURF_PENDING,
   GET_SMURF_SUCCESS,
   GET_SMURF_FAILED,
-  ADD_SMURF_PENDING,
-  ADD_SMURF_SUCCESS,
-  ADD_SMURF_FAILED
+  ADD_SMURF_PENDING
 } from "../actions/actions";
 
 const initialState = {
   isLoading: false,
-  addSmurf: false,
+  addingSmurf: false,
   error: null,
   smurfs: []
 };
@@ -42,26 +40,27 @@ export function reducer(state = initialState, action) {
     case ADD_SMURF_PENDING: {
       return {
         ...state,
-        addSmurf: true
+        addingSmurf: true
       };
     }
 
-    case ADD_SMURF_SUCCESS: {
-      return {
-        ...state,
-        smurfs: action.payload,
-        addSmurf: false
-      };
-    }
-
-    case ADD_SMURF_FAILED: {
-      return {
-        ...state,
-        error: action.payload,
-        addSmurf: false
-      };
-    }
     default:
       return state;
   }
 }
+
+// case ADD_SMURF_SUCCESS: {
+//   return {
+//     ...state,
+//     smurfs: [...state.smurfs, action.payload],
+//     addingSmurf: false
+//   };
+// }
+
+// case ADD_SMURF_FAILED: {
+//   return {
+//     ...state,
+//     error: action.payload,
+//     addingSmurf: false
+//   };
+// }

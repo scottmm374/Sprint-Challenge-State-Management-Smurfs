@@ -10,10 +10,8 @@ function SmurfList(props) {
             <Card key={smurf.id}>
               <CardTitle>Name: {smurf.name}</CardTitle>
               <CardBody>
-                <CardText>
-                  <p>Age: {smurf.age}</p>
-                  <p>Height: {smurf.height}</p>
-                </CardText>
+                <CardText>Age: {smurf.age}</CardText>
+                <CardText>Height: {smurf.height}</CardText>
               </CardBody>
             </Card>
           );

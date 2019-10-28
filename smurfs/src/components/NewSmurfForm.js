@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { addSmurf } from "../actions/actions";
 
 function NewSmurfForm(props) {
   const [newSmurf, setNewSmurf] = useState({
@@ -11,11 +13,14 @@ function NewSmurfForm(props) {
     setNewSmurf({ ...newSmurf, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {};
+  const handleSubmit = e => {
+    // e.prevent.default();
+    props.addSmurf(newSmurf);
+  };
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -43,4 +48,18 @@ function NewSmurfForm(props) {
   );
 }
 
-export default NewSmurfForm;
+const mapStateToProps = state => {
+  return {
+    error: state.error,
+    addSmurf: state.addSmurf
+  };
+};
+
+const mapDispatchToProps = {
+  addSmurf
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NewSmurfForm);
