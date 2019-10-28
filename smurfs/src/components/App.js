@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import SmurfList from "./SmurfList";
+import NewSmurfForm from "./NewSmurfForm";
 import { getSmurf } from "../actions/actions";
 import { connect } from "react-redux";
 import "./App.css";
@@ -12,6 +13,7 @@ function App(props) {
   return (
     <div className="App">
       <h1>SMURFS Village</h1>
+      <NewSmurfForm />
       <SmurfList smurfs={props.smurfs} />
     </div>
   );
